@@ -1,0 +1,11 @@
+# Web Interface & Dashboard
+streamlit
+pandas
+plotly
+
+# Machine Learning & Timezones
+scikit-learn
+pytz
+
+# Database Driver (For MySQL Connectivity)
+mysql-connector-python
