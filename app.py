@@ -7,16 +7,16 @@ import pytz
 from datetime import datetime
 
 # --- DATABASE CONNECTION (Centralized) ---
+import psycopg2
+
 def get_db_connection():
-    import mysql.connector
-    return mysql.connector.connect(
+    return psycopg2.connect(
         host=st.secrets["DB_HOST"],
+        database=st.secrets["DB_NAME"],
         user=st.secrets["DB_USER"],
         password=st.secrets["DB_PASS"],
-        database=st.secrets["DB_NAME"],
-        autocommit=True
+        port=st.secrets["DB_PORT"]
     )
-
 def init_db():
     """Initializes tables using MySQL specific syntax."""
     conn = get_db_connection()
