@@ -1,11 +1,4 @@
-# Web Interface & Dashboard
 streamlit
+psycopg2-binary
 pandas
-plotly
-
-# Machine Learning & Timezones
 scikit-learn
-pytz
-
-# Database Driver (For MySQL Connectivity)
-mysql-connector-python
