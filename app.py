@@ -6,7 +6,7 @@ import json
 import pytz
 from datetime import datetime
 
-# --- DATABASE CONNECTION (Centralized) ---
+
 import psycopg2
 
 def get_db_connection():
@@ -15,7 +15,8 @@ def get_db_connection():
         database=st.secrets["DB_NAME"],
         user=st.secrets["DB_USER"],
         password=st.secrets["DB_PASS"],
-        port=st.secrets["DB_PORT"]
+        port=st.secrets["DB_PORT"],
+        sslmode="require"  # Add this line here
     )
 def init_db():
     """Initializes tables using MySQL specific syntax."""
